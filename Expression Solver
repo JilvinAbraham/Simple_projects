@@ -1,0 +1,48 @@
+class LoanCalculator:
+    
+    def __init__(self):
+        win=Tk()
+        win.title("Loan Calculator")
+        win.geometry("500x300")
+        
+        label1 = Label(win,text = "Anual interest rate")
+        label1.place(x=20,y=10)
+        
+        self.v1 = StringVar()
+        entr1 = Entry(win,textvariable = self.v1)
+        entr1.place(x=150,y=10)
+        
+        label2 = Label(win,text = "Number of Years")
+        label2.place(x=20,y=40)
+        
+        self.v2 = StringVar()
+        entr2 = Entry(win,textvariable = self.v2)
+        entr2.place(x=150,y=40)
+        
+        label3 = Label(win,text = "Loan Amount")
+        label3.place(x=20,y=70)
+        
+        self.v3 = StringVar()
+        entr3 = Entry(win,textvariable = self.v3)
+        entr3.place(x=150,y=70)
+        
+        label4 = Label(win,text = "Monthly payment")
+        label4.place(x=20,y=100)
+        
+        label5 = Label(win,text = "Total Payment")
+        label5.place(x=20,y=130)
+        
+        button1 = Button(win,text="Compute payment",command = self.compute).place(x=160,y=130)
+        
+        self.label6 = Label(win,text = "Total Payment")
+        self.label6.place(x=150,y=100)
+        
+        win.mainloop()
+        
+        
+        
+    def compute(self):
+        a = int(self.v1.get()) + int(self.v2.get()) + int(self.v3.get())
+        self.label6["text"]=str(a//3)
+        
+LoanCalculator()
