@@ -6,3 +6,5 @@ Simple tkinter based projects
     give an expression in x in the next text box: x**2+x+1
 2. Map Search:
     Enter a address in textbox and press search.
+3. Guess:
+    The system has done a random guess from numbers 1-100 try to predict the number you get three chances.
